@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#188de7">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Markup</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="assets/js/bootstrap.bundle.js" defer></script>
+    <script src="assets/js/drop-zone.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body class="font-proxima-nova">
+
+    <header class="nav-header">
+        <nav class="navbar navbar-expand-xl">
+            <div class="container-xl p-0">
+                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.svg" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="nav-header-drop-content navbar-collapse collapse" id="navbar-toggler">
+                    <ul class="navbar-nav justify-content-center align-items-center nav-header-item-list mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Цены и сроки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">О компании</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Контакты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Оформить груз</a>
+                        </li>
+                    </ul>
+                    <div class="navbar-btn d-xl-flex justify-content-center">
+                        <a href="#" class="btn btn-primary">Оставить заявку</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="">
+        <section class="page-section">
+            <div class="swiper swiper-banner">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide" style="background-image: url('assets/img/banner-1.png');">
+                        <div class="banner content-container">
+                            <p class="banner-title">Прямое КАРГО из Китая</p>
+                            <p class="banner-description">Доставляем любые грузы из Китая по честной цене</p>
+                            <button class="banner-btn btn btn-with-icon btn-primary">
+                                Рассчитать стоимость
+                                <img class="btn__icon" src="assets/img/button-arrow.svg" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url('assets/img/banner-2.png');">
+                        <div class="banner content-container">
+                            <p class="banner-title">Выкуп товара с ТаоБао, 1688</p>
+                            <p class="banner-description">Выкуп и доставка товаров с китайских торговых площадок. </p>
+                            <button class="banner-btn btn btn-with-icon btn-primary">
+                                Рассчитать стоимость
+                                <img class="btn__icon" src="assets/img/button-arrow.svg" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url('assets/img/banner-3.png');">
+                        <div class="banner content-container">
+                            <p class="banner-title">Экспресс авто доставка</p>
+                            <p class="banner-description empty"></p>
+                            <button class="banner-btn btn btn-with-icon btn-primary">
+                                Рассчитать стоимость
+                                <img class="btn__icon" src="assets/img/button-arrow.svg" />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button swiper-button-prev"></div>
+                <div class="swiper-button swiper-button-next"></div>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <div class="content-container calc-form-content-container">
+                <h2 class="page-section-title calc-form-title secondary align-left inline">Получить рассчет стоимости доставки вашего груза</h2>
+                <form class="calc-form">
+                    <div class="calc-form-grid">
+                        <div class="input-block order-1">
+                            <label for="category" class="form-label">Категория товара:</label>
+                            <input id="category" class="form-control" type="text" placeholder="Категория товара" />
+                        </div>
+                        <div class="input-block order-3">
+                            <label for="mass" class="form-label">Вес груза (кг):</label>
+                            <input id="mass" class="form-control" type="text" placeholder="Введите вес" />
+                        </div>
+                        <div class="input-block order-2">
+                            <label for="cost" class="form-label">Стоимость груза:</label>
+                            <input id="cost" class="form-control" type="text" placeholder="Введите стоимость" />
+                        </div>
+                        <div class="input-block order-4">
+                            <label for="volume" class="form-label">Объем груза (м3):</label>
+                            <input id="volume" class="form-control" type="text" placeholder="Введите объем" />
+                        </div>
+                        <div class="input-block order-5 checkbox-block">
+                            <div class="checkbox-input">
+                                <input class="form-check-input" id="markup-checkbox" type="checkbox">
+                                <label class="form-check-label" for="markup-checkbox">Страховка</label>
+                            </div>
+                            <div class="checkbox-input">
+                                <input class="form-check-input" id="markup-checkbox" type="checkbox">
+                                <label class="form-check-label" for="markup-checkbox">Таможенное оформление</label>
+                            </div>
+                        </div>
+                        <div class="input-block order-6">
+                            <label for="tn_ved_code" class="form-label">Код ТН ВЭД:</label>
+                            <input id="tn_ved_code" class="form-control" type="text" placeholder="Введите код" />
+                        </div>
+                    </div>
+                    <div class="file-input">
+                        <div class="file-list"></div>
+                        <div class="block">Загрузить фото товара</div>
+                        <input id="item-photo" type="file" />
+                    </div>
+                    <button class="btn btn-primary btn-block btn-with-icon" type="submit">
+                        Следующий шаг
+                        <img class="btn__icon" src="assets/img/button-arrow.svg" /></button>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <div class="content-container">
+                <h2 class="page-section-title primary">Почему стоит выбрать именно нас?</h2>
+
+                <div class="swiper swiper-benefits">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img class="swiper-slide-title" src="assets/img/benefit-1.svg" />
+                            <p class="swiper-slide-description">Таможенное оформление груза</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-slide-title" src="assets/img/benefit-2.svg" />
+                            <p class="swiper-slide-description">Страховка груза</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-slide-title" src="assets/img/benefit-3.svg" />
+                            <p class="swiper-slide-description">Проверка товара на брак</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-slide-title" src="assets/img/benefit-4.svg" />
+                            <p class="swiper-slide-description">Доставка в любой город Украины</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-slide-title" src="assets/img/benefit-5.svg" />
+                            <p class="swiper-slide-description slim">Консолидация на складе</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-slide-title" src="assets/img/benefit-6.svg" />
+                            <p class="swiper-slide-description">Ответственное хранение груза</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-slide-title" src="assets/img/benefit-7.svg" />
+                            <p class="swiper-slide-description slim">Помощь в оплате товара</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-slide-title" src="assets/img/benefit-8.svg" />
+                            <p class="swiper-slide-description wide">Упаковка, переупаковка, паллетирование груза к международной
+                                перевозке</p>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <div class="content-container">
+                <h2 class="page-section-title secondary">Варианты доставки грузов из Китая</h2>
+
+                <div class="card-swiper-container">
+                    <div class="swiper card-swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="shipping-card">
+                                    <img class="shipping-card-image" src="assets/img/auto-standart.png" />
+                                    <h3 class="shipping-card-title">Авто - обычная</h3>
+                                    <div class="shipping-card-conditions">
+                                        <span>
+                <img class="icon" src="assets/img/calendar-icon.svg" />
+                <span class="text">9-15 дней</span>
+                                        </span>
+                                        <span>
+                <img class="icon" src="assets/img/box-icon.svg" />
+                <span class="text">от 5 кг</span>
+                                        </span>
+                                    </div>
+                                    <p class="shipping-card-price">
+                                        <span class="text-body-secondary">от</span>
+                                        <span class="big">2,5</span>$/кг
+                                    </p>
+                                    <div class="shipping-card-buttons">
+                                        <button class="shipping-btn btn btn-primary">
+                                            Оставить заявку
+                                        </button>
+                                        <button class="shipping-btn btn btn-outline-primary text-white">
+                                            Подробнее
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="shipping-card">
+                                    <img class="shipping-card-image" src="assets/img/auto-fast.png" />
+                                    <h3 class="shipping-card-title">Авто - ускоренная</h3>
+                                    <div class="shipping-card-conditions">
+                                        <span>
+                <img class="icon" src="assets/img/calendar-icon.svg" />
+                <span class="text">9-15 дней</span>
+                                        </span>
+                                        <span>
+                <img class="icon" src="assets/img/box-icon.svg" />
+                <span class="text">от 5 кг</span>
+                                        </span>
+                                    </div>
+                                    <p class="shipping-card-price">
+                                        <span class="text-body-secondary">от</span>
+                                        <span class="big">2,5</span>$/кг
+                                    </p>
+                                    <div class="shipping-card-buttons">
+                                        <button class="shipping-btn btn btn-primary">
+                                            Оставить заявку
+                                        </button>
+                                        <button class="shipping-btn btn btn-outline-primary text-white">
+                                            Подробнее
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="shipping-card">
+                                    <img class="shipping-card-image" src="assets/img/plane.png" />
+                                    <h3 class="shipping-card-title">Авиа</h3>
+                                    <div class="shipping-card-conditions">
+                                        <span>
+                <img class="icon" src="assets/img/calendar-icon.svg" />
+                <span class="text">9-15 дней</span>
+                                        </span>
+                                        <span>
+                <img class="icon" src="assets/img/box-icon.svg" />
+                <span class="text">от 5 кг</span>
+                                        </span>
+                                    </div>
+                                    <p class="shipping-card-price">
+                                        <span class="text-body-secondary">от</span>
+                                        <span class="big">2,5</span>$/кг
+                                    </p>
+                                    <div class="shipping-card-buttons">
+                                        <button class="shipping-btn btn btn-primary">
+                                            Оставить заявку
+                                        </button>
+                                        <button class="shipping-btn btn btn-outline-primary text-white">
+                                            Подробнее
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="shipping-card">
+                                    <img class="shipping-card-image" src="assets/img/train.png" />
+                                    <h3 class="shipping-card-title">Ж/д</h3>
+                                    <div class="shipping-card-conditions">
+                                        <span>
+                <img class="icon" src="assets/img/calendar-icon.svg" />
+                <span class="text">9-15 дней</span>
+                                        </span>
+                                        <span>
+                <img class="icon" src="assets/img/box-icon.svg" />
+                <span class="text">от 5 кг</span>
+                                        </span>
+                                    </div>
+                                    <p class="shipping-card-price">
+                                        <span class="text-body-secondary">от</span>
+                                        <span class="big">2,5</span>$/кг
+                                    </p>
+                                    <div class="shipping-card-buttons">
+                                        <button class="shipping-btn btn btn-primary">
+                                            Оставить заявку
+                                        </button>
+                                        <button class="shipping-btn btn btn-outline-primary text-white">
+                                            Подробнее
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="shipping-card">
+                                    <img class="shipping-card-image" src="assets/img/sea.png" />
+                                    <h3 class="shipping-card-title">Море</h3>
+                                    <div class="shipping-card-conditions">
+                                        <span>
+                <img class="icon" src="assets/img/calendar-icon.svg" />
+                <span class="text">9-15 дней</span>
+                                        </span>
+                                        <span>
+                <img class="icon" src="assets/img/box-icon.svg" />
+                <span class="text">от 5 кг</span>
+                                        </span>
+                                    </div>
+                                    <p class="shipping-card-price">
+                                        <span class="text-body-secondary">от</span>
+                                        <span class="big">2,5</span>$/кг
+                                    </p>
+                                    <div class="shipping-card-buttons">
+                                        <button class="shipping-btn btn btn-primary">
+                                            Оставить заявку
+                                        </button>
+                                        <button class="shipping-btn btn btn-outline-primary text-white">
+                                            Подробнее
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper-button-container">
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button swiper-button-prev"></div>
+                        <div class="swiper-button swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <div class="content-container">
+                <h2 class="page-section-title primary">услуги</h2>
+
+                <div class="card-swiper-container">
+                    <div class="swiper card-swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="service-card" style="--bg-image: url('assets/img/product-buyout.png')">
+                                    <h3 class="service-card-title">Выкуп товара</h3>
+                                    <p class="service-card-description">
+                                        Компания - это полный комплекс логистических услуг по доставке грузов из Китая в Украину - сборные грузы
+                                        и цельные товарные партии, услуги посредника ТаоБао, КАРГО Китай-Украина
+                                    </p>
+                                    <button class="service-card-button btn btn-outline-primary text-white">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="service-card" style="--bg-image: url('assets/img/insurance.png')">
+                                    <h3 class="service-card-title">Страховка груза</h3>
+                                    <p class="service-card-description">
+                                        Компания - это полный комплекс логистических услуг по доставке грузов из Китая в Украину - сборные грузы
+                                        и цельные товарные партии, услуги посредника ТаоБао, КАРГО Китай-Украина.
+                                    </p>
+                                    <button class="service-card-button btn btn-outline-primary text-white">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="service-card" style="--bg-image: url('assets/img/warehouse-rent.png')">
+                                    <h3 class="service-card-title">Аренда склада</h3>
+                                    <p class="service-card-description">
+                                        Компания - это полный комплекс логистических услуг по доставке грузов из Китая в Украину - сборные грузы
+                                        и цельные товарные партии, услуги посредника ТаоБао, КАРГО Китай-Украина
+                                    </p>
+                                    <button class="service-card-button btn btn-outline-primary text-white">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="service-card" style="--bg-image: url('assets/img/transaction.png')">
+                                    <h3 class="service-card-title">Перевод денежных средств</h3>
+                                    <p class="service-card-description">
+                                        Компания - это полный комплекс логистических услуг по доставке грузов из Китая в Украину - сборные грузы
+                                        и цельные товарные партии, услуги посредника ТаоБао, КАРГО Китай-Украина
+                                    </p>
+                                    <button class="service-card-button btn btn-outline-primary text-white">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper-button-container">
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button swiper-button-prev"></div>
+                        <div class="swiper-button swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <div class="content-container">
+                <div class="about">
+                    <div class="about-text">
+                        <h2 class="about-text-title page-section-title secondary align-left">О компании</h2>
+                        <p>Компания Азия Карго - это полный комплекс логистических услуг по доставке грузов из Китая в
+                            <strong>Украину</strong> - сборные грузы и цельные товарные партии, услуги посредника ТаоБао, КАРГО
+                            Китай-<strong>Украину</strong>. Для вашего удобства есть тарифы на лёгкий и тяжелый куб. Мы работаем на рынке
+                            более 4 лет, а руководители компании занимаются логистикой уже более 11 лет.
+                        </p>
+                        <p>Мы стремимся предоставить лучшие условия доставки и лучший сервис своим клиентам. Выбирая нас - вы выбираете
+                            качественную доставку оптимальную по цене и времени! Убедитесь в этом сами!</p>
+                    </div>
+                    <img class="about-picture" src="assets/img/about.png" />
+                </div>
+                <h2 class="page-section-title primary">Часто задаваемые вопросы</h2>
+                <div class="faq">
+                    <div class="faq-accordion" id="accordion-faq">
+                        <div class="faq-accordion-item">
+                            <h3 class="faq-accordion-header">
+            <button class="faq-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-controls="faq-1">
+              Как рассчитывается стоимость доставки?
+            </button>
+          </h3>
+                            <div id="faq-1" class="faq-accordion-collapse collapse" data-bs-parent="#accordion-faq">
+                                <div>
+                                    <p class="faq-accordion-body">
+                                        Да, мы предоставляем такую услугу, мы можем взять оплату товара в Китае на себя. Если у вас нет
+                                        валютного счёта, то можете оплатить товар в гривнах на наш счет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-item">
+                            <h3 class="faq-accordion-header">
+            <button class="faq-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-controls="faq-2">
+              Как происходит оплата за доставку груза?
+            </button>
+          </h3>
+                            <div id="faq-2" class="faq-accordion-collapse collapse" data-bs-parent="#accordion-faq">
+                                <div>
+                                    <p class="faq-accordion-body">
+                                        Да, мы предоставляем такую услугу, мы можем взять оплату товара в Китае на себя. Если у вас нет
+                                        валютного счёта, то можете оплатить товар в гривнах на наш счет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-item">
+                            <h3 class="faq-accordion-header">
+            <button class="faq-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-controls="faq-3">
+              Как происходит оплата за доставку груза?
+            </button>
+          </h3>
+                            <div id="faq-3" class="faq-accordion-collapse collapse" data-bs-parent="#accordion-faq">
+                                <div>
+                                    <p class="faq-accordion-body">
+                                        Да, мы предоставляем такую услугу, мы можем взять оплату товара в Китае на себя. Если у вас нет
+                                        валютного счёта, то можете оплатить товар в гривнах на наш счет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-item">
+                            <h3 class="faq-accordion-header">
+            <button class="faq-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-controls="faq-4">
+              Можно ли через вас оплатить товар поставщику?
+            </button>
+          </h3>
+                            <div id="faq-4" class="faq-accordion-collapse collapse show" data-bs-parent="#accordion-faq">
+                                <div>
+                                    <p class="faq-accordion-body">
+                                        Да, мы предоставляем такую услугу, мы можем взять оплату товара в Китае на себя. Если у вас нет
+                                        валютного счёта, то можете оплатить товар в гривнах на наш счет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-item">
+                            <h3 class="faq-accordion-header">
+            <button class="faq-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5" aria-controls="faq-5">
+              В чём особенность КАРГО доставки из Китая?
+            </button>
+          </h3>
+                            <div id="faq-5" class="faq-accordion-collapse collapse" data-bs-parent="#accordion-faq">
+                                <div>
+                                    <p class="faq-accordion-body">
+                                        Да, мы предоставляем такую услугу, мы можем взять оплату товара в Китае на себя. Если у вас нет
+                                        валютного счёта, то можете оплатить товар в гривнах на наш счет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-accordion-item">
+                            <h3 class="faq-accordion-header">
+            <button class="faq-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-6" aria-controls="faq-6">
+              Какой срок доставки из Китая?
+            </button>
+          </h3>
+                            <div id="faq-6" class="faq-accordion-collapse collapse" data-bs-parent="#accordion-faq">
+                                <div>
+                                    <p class="faq-accordion-body">
+                                        Да, мы предоставляем такую услугу, мы можем взять оплату товара в Китае на себя. Если у вас нет
+                                        валютного счёта, то можете оплатить товар в гривнах на наш счет.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="faq-form">
+                        <h3 class="faq-form-title">Остались вопросы?</h3>
+                        <p class="faq-form-description">Оставьте заявку и наш менеджер ответит вам в ближайшее время</p>
+                        <div class="faq-form-fields">
+                            <input id="name" class="form-control" type="text" placeholder="Имя *" required />
+                            <input id="phone" class="form-control" type="phone" placeholder="Телефон *" required />
+                            <input id="email" class="form-control" type="text" placeholder="E-mail" />
+                            <textarea id="question" class="form-control form-textarea" placeholder="Ваш вопрос"></textarea>
+                        </div>
+                        <div class="faq-form-submit">
+                            <button class="btn btn-primary btn-block btn-with-icon" type="submit">
+                                Отправить запрос
+                                <img class="btn__icon" src="assets/img/button-arrow.svg" /></button>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <div class="content-container">
+                <h2 class="page-section-title no-decor">Готовы к сотрудничеству?</h2>
+                <h3 class="page-section-subtitle secondary">Зарегистрируйте груз!</h3>
+
+                <div class="instructions">
+                    <picture>
+                        <source srcset="assets/img/container-mobile.png" media="(max-width: 768px)" />
+                        <img src="assets/img/container.png" class="instructions-picture float-xl-end" alt="" />
+                    </picture>
+                    <ul class="instructions-list">
+                        <li>
+                            <p>• Для того, чтобы начать сотрудничество, необходимо оформить груз указав информацию о содержимом груза, его
+                                стоимость и количество. А так-же прикрепив фотографии к заявке.</p>
+                        </li>
+                        <li>
+                            <p>• Если требуется проверка товара на соответсвие количеству, то при оформлении груза на нашем сайте укажите
+                                это
+                                в графе "Примечание". Данная услуга платная и составляет 3 юаня за одну позицию в заказе. Любые
+                                дополнительные
+                                проверки груза обсуждаются индивидуально в том числе и их стоимость.</p>
+                        </li>
+                        <li>
+                            <p>• До отправки груза на наш склад в Китае обязательно позаботьтесь о том, чтобы сделать маркировку, с
+                                номером
+                                Вашего заказа у нас на сайте, для каждой внешней коробки, чтобы мы смогли определить именно Ваш груз. Если у
+                                Вас нет возможности сделать это самостоятельно, то попросите об этом своего поставщика.</p>
+                        </li>
+                    </ul>
+
+                    <picture>
+                        <source srcset="assets/img/truck-mobile.png" media="(max-width: 768px)" />
+                        <img src="assets/img/truck.png" class="instructions-picture float-xl-start" alt="" />
+                    </picture>
+                    <ul class="instructions-list">
+                        <li>
+                            <p>• После отправки груза на наш склад в Китае, Вам обязательно нужно указать трек-номер для отслеживания
+                                посылок по Китаю для каждой позиции в заказе. Внести трек-номер можно на странице заказа. Трек-номер - это
+                                ещё одна мера для идентификации Вашего груза на нашем складе.</p>
+                        </li>
+                        <li>
+                            <p>• Если Вы оформили груз по нашей инструкции и сделали все правильно, то при получении Вашего груза на
+                                складе в Китае статус заказа изменится на "На складе".</p>
+                        </li>
+                    </ul>
+                    <button class="instructions-btn btn btn-with-icon btn-primary">Оформить
+                        груз<img class="btn__icon" src="assets/img/button-arrow.svg" /></button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer content-container">
+        <div class="footer-row">
+            <div class="contact-info">
+                <img class="footer-logo" src="assets/img/logo.svg" />
+                <ul class="footer-address">
+                    <li>8(800)600-18-69</li>
+                    <li><a class="mail-link" href="mailto:info@cargoasia.info">info@cargoasia.info</a></li>
+                    <li>Адрес в Китае:</li>
+                    <li>浙江省金华市义乌市后宅街道洪华小区5</li>
+                    <li>栋一单元一楼RT789库房 高建军 电话</li>
+                    <li>15966660379</li>
+                </ul>
+                <div class="footer-socials">
+                    <a href="#"><img src="assets/img/instagram.svg" alt="instagram" /></a>
+                    <a href="#"><img src="assets/img/vk.svg" alt="vk" /></a>
+                    <a href="#"><img src="assets/img/telegram.svg" alt="telegram" /></a>
+                </div>
+            </div>
+            <div class="site-map">
+                <div class="site-map-block" style="flex: 0.31;">
+                    <h6 class="site-map-title">Грузоперевозки</h6>
+                    <ul class="site-map-list">
+                        <li><a class="map-link" href="#">Цены и сроки</a></li>
+                        <li><a class="map-link" href="#">Услуги</a></li>
+                        <li><a class="map-link" href="#">О компании</a></li>
+                        <li><a class="map-link" href="#">Контакты</a></li>
+                        <li><a class="map-link" href="#">Оформить груз</a></li>
+                    </ul>
+                </div>
+                <div class="site-map-block" style="flex: 0.35;">
+                    <h6 class="site-map-title">Услуги</h6>
+                    <ul class="site-map-list">
+                        <li><a class="map-link" href="#">Выкуп товара</a></li>
+                        <li><a class="map-link" href="#">Страховка груза</a></li>
+                        <li><a class="map-link" href="#">Аренда склада</a></li>
+                        <li><a class="map-link" href="#">Перевод денежных средств</a></li>
+                    </ul>
+                </div>
+                <div class="site-map-block" style="flex: 0.36;">
+                    <h6 class="site-map-title">Информация</h6>
+                    <ul class="site-map-list">
+                        <li><a class="map-link" href="#">Отзывы</a></li>
+                        <li><a class="map-link" href="#">Требования к грузу</a></li>
+                        <li><a class="map-link" href="#">Договор-оферта</a></li>
+                        <li><a class="map-link" href="#">Как заключить договор</a></li>
+                        <li><a class="map-link" href="#">Способы оплаты услуг</a></li>
+                        <li><a class="map-link" href="#">Документы</a></li>
+                        <li><a class="map-link" href="#">Статьи</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
